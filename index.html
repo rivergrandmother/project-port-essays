@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essays</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="https://rivergrandmother.com" class="nav-link">Work</a>
+      <a href="/" class="nav-link active">Essays</a>
+    </nav>
+  </header>
+
+  <main class="list-page">
+    <h1>Essays</h1>
+    <ul class="essay-list" id="essay-list">
+      <!-- Populated from essays.js -->
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2026</p>
+  </footer>
+
+  <script src="essays.js"></script>
+  <script>
+    const list = document.getElementById("essay-list");
+    ESSAYS.forEach(essay => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = essay.slug + ".html";
+      a.innerHTML = `
+        <span class="essay-title">${essay.title}</span>
+        <span class="essay-date">${essay.date}</span>
+      `;
+      li.appendChild(a);
+      if (essay.description) {
+        const desc = document.createElement("p");
+        desc.className = "essay-description";
+        desc.textContent = essay.description;
+        li.appendChild(desc);
+      }
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>

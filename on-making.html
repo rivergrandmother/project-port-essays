@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>On Making</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="https://rivergrandmother.com" class="nav-link">Work</a>
+      <a href="/" class="nav-link active">Essays</a>
+    </nav>
+  </header>
+
+  <main class="essay-page">
+    <article class="essay-content">
+      <a href="/" class="back-link">&larr; All essays</a>
+      <h1>On Making</h1>
+      <p class="essay-meta">April 2026</p>
+
+      <h2 id="beginning">Beginning</h2>
+      <p>There is a moment before making where everything is possible. The canvas is blank, the page is empty, and the weight of potential sits quietly in your hands.</p>
+      <p>This is a placeholder essay. Replace this text with your writing.</p>
+
+      <h2 id="process">Process</h2>
+      <p>The work reveals itself slowly. Each mark is a question, each layer a partial answer. You don't find the piece — the piece finds you, if you stay with it long enough.</p>
+
+      <h2 id="letting-go">Letting Go</h2>
+      <p>Knowing when to stop is its own kind of skill. The work is never finished, only released.</p>
+    </article>
+
+    <aside class="toc" id="toc">
+      <h3>Contents</h3>
+      <ul></ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026</p>
+  </footer>
+
+  <script>
+    const headings = document.querySelectorAll(".essay-content h2");
+    const tocList = document.querySelector(".toc ul");
+    headings.forEach(h => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = "#" + h.id;
+      a.textContent = h.textContent;
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+
+    const tocLinks = document.querySelectorAll(".toc a");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove("active"));
+          const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add("active");
+        }
+      });
+    }, { rootMargin: "-20% 0px -60% 0px" });
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+</body>
+</html>
