@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Old Nature</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="https://rivergrandmother.com" class="nav-link">Work</a>
+      <a href="/" class="nav-link active">Essays</a>
+    </nav>
+  </header>
+
+  <main class="essay-page">
+    <article class="essay-content">
+      <a href="/" class="back-link">&larr; All essays</a>
+      <h1>The Old Nature</h1>
+      <p class="essay-meta">January 18, 2025</p>
+
+      
+      <p>Between Religion and Horror, there was a chair. Only one chair. A soft cushion with a wooden arm rest. It would be in someone's Pinterest board with the label "Mid-century modern". Next to Horror was Adventure, Crime & Thriller. And, next to Religion was Psychology. Who decided to put these together? The shelves were full with books. Untouched. Perhaps, not interested by the retirees. The library was in an old village. A real "hidden gem". Where are the Influencers when you need them? I hope they turn up soon. We really need them here.</p>
+
+      
+      <p>Time, like an onion, peeled away the layers of the community one by one. First, the working men. Then their families, the children scattering, the teenagers venturing out, leaving only the retirees, gathered, at the heart of the village, like the onion's core. The ones who saw The Poets and The Sorrows performing live in their youth. The ones with nothing to proof anymore. The ones with no where to go. Perhaps, too used to their daily lives. Addicted to their daily routines. They don't mind. The government takes care of them. Their small pensions coming in every month. Their healthcare is sorted. A local caffe, a community centre, and a library.</p>
+
+      
+      <p>Nature, like icing a cake, added its layers back, one by one. First, weeds and grasses crept over the roads, softening their harsh edges. Then the buildings began to yield, cracks formed, roofs leaked, and small mammals made their homes within the crumbling shells. Birds and insects nested in the branches of young trees that pushed up through the ruins. Slowly, an infant woodland emerged, its landscape alive with movement. Deer wandered through its shadows, while birds of prey circled overhead, thriving amidst the decay. Each addition enriched the scene, weaving depth and character into this reclaimed sanctuary.</p>
+
+      <p>I saw an old barn owl on my way to the library. I don't actually know it's an old owl or a young one, but it's nice to imagine. An old owl spending time amongst the old humans. In the silent library, I don't seem to see any of them visit (the owl nor humans). It's a place of refuge for me. A source of secrets. And so, I stay, and I study.</p>
+
+      <p>What does it mean to be human in a world where there are fewer of us? How do we learn to share resources equally with nature around us and the nature within us? What does it truly mean to be alone in a world so vast, so silent, yet so alive?</p>
+    </article>
+
+    <aside class="toc" id="toc">
+      <h3>Contents</h3>
+      <ul></ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026</p>
+  </footer>
+
+  <script>
+    const headings = document.querySelectorAll(".essay-content h2");
+    const tocList = document.querySelector(".toc ul");
+    headings.forEach(h => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = "#" + h.id;
+      a.textContent = h.textContent;
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+
+    const tocLinks = document.querySelectorAll(".toc a");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove("active"));
+          const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add("active");
+        }
+      });
+    }, { rootMargin: "-20% 0px -60% 0px" });
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+</body>
+</html>

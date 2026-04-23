@@ -14,15 +14,9 @@
 
 const ESSAYS = [
   {
-    slug: "on-making",
-    title: "On Making",
-    date: "April 2026",
-    description: "Why the act of making matters more than the thing made.",
-  },
-  {
-    slug: "colour-and-memory",
-    title: "Colour and Memory",
-    date: "March 2026",
-    description: "How certain palettes carry the weight of a place.",
+    slug: "on-nature",
+    title: "On Nature",
+    date: "May 2026",
+    description: "Reflections on how nature reclaims abandoned spaces.",
   },
 ];
