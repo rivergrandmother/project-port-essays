@@ -252,7 +252,8 @@ nav {
   flex-wrap: wrap;
 }
 
-.share-links a {
+.share-links a,
+.share-links button {
   display: inline-block;
   padding: 0.5rem 1rem;
   background: var(--bg);
@@ -261,10 +262,29 @@ nav {
   text-decoration: none;
   color: var(--text);
   font-size: 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
   transition: all 0.2s;
 }
 
-.share-links a:hover {
+.share-links a:hover,
+.share-links button:hover {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.copy-link {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-link:hover {
   background: var(--text);
   color: var(--bg);
   border-color: var(--text);
