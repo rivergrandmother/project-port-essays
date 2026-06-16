@@ -14,9 +14,15 @@
 
 const ESSAYS = [
   {
-    slug: "on-nature",
-    title: "On Nature",
+    slug: "old-nature",
+    title: "Old Nature",
     date: "May 2026",
     description: "Reflections on how nature reclaims abandoned spaces.",
+  },
+  {
+    slug: "talking-clouds",
+    title: "Talking Clouds",
+    date: "June 2026",
+    description: "A dialogue about wanting normal life, asking questions, and finding meaning in uncertainty.",
   },
 ];
