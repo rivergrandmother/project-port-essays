@@ -141,41 +141,10 @@
       
       <p>Me: Yes.</p>
     </article>
-
-    <aside class="toc" id="toc">
-      <h3>Contents</h3>
-      <ul></ul>
-    </aside>
   </main>
 
   <footer>
     <p>&copy; river 2026</p>
   </footer>
-
-  <script>
-    const headings = document.querySelectorAll(".essay-content h2");
-    const tocList = document.querySelector(".toc ul");
-    headings.forEach(h => {
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      a.href = "#" + h.id;
-      a.textContent = h.textContent;
-      li.appendChild(a);
-      tocList.appendChild(li);
-    });
-
-    const tocLinks = document.querySelectorAll(".toc a");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          tocLinks.forEach(l => l.classList.remove("active"));
-          const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
-          if (active) active.classList.add("active");
-        }
-      });
-    }, { rootMargin: "-20% 0px -60% 0px" });
-
-    headings.forEach(h => observer.observe(h));
-  </script>
 </body>
 </html>
