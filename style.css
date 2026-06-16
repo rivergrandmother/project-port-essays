@@ -231,10 +231,15 @@ nav {
 /* ── Share Section ── */
 
 .share-section {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   text-align: center;
   font-size: 0.7rem;
   color: var(--text-light);
+}
+
+.share-section h3 {
+  margin-bottom: 0.5rem;
+  font-weight: normal;
 }
 
 .share-links {
@@ -259,20 +264,6 @@ nav {
 
 .share-links a:hover,
 .share-links button:hover {
-  color: var(--text);
-  text-decoration: underline;
-}
-
-.copy-link {
-  background: none;
-  border: none;
-  padding: 0;
-  color: var(--text-light);
-  font-size: 0.7rem;
-  cursor: pointer;
-}
-
-.copy-link:hover {
   color: var(--text);
   text-decoration: underline;
 }
