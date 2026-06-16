@@ -228,6 +228,48 @@ nav {
   color: var(--text);
 }
 
+/* ── Share Section ── */
+
+.share-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.share-section h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.share-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.share-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.share-links a:hover {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
 /* ── Footer ── */
 
 footer {
