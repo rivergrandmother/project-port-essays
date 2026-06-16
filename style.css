@@ -228,45 +228,7 @@ nav {
   color: var(--text);
 }
 
-/* ── Share Section ── */
 
-.share-section {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 0.7rem;
-  color: var(--text-light);
-}
-
-.share-section h3 {
-  margin-bottom: 0.5rem;
-  font-weight: normal;
-}
-
-.share-links {
-  display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.share-links a,
-.share-links button {
-  color: var(--text-light);
-  text-decoration: none;
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 0.7rem;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.share-links a:hover,
-.share-links button:hover {
-  color: var(--text);
-  text-decoration: underline;
-}
 
 /* ── Footer ── */
 
