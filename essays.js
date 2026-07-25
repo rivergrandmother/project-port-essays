@@ -25,4 +25,10 @@ const ESSAYS = [
     date: "June 2026",
     firstLine: "Am I late again? Sunday morning — I want to have bubble tea today.",
   },
+  {
+    slug: "vernazza-sul-mare",
+    title: "Vernazza sul Mare",
+    date: "July 2026",
+    firstLine: "There is a nervousness before you step into the sea, when you first walk into her presence.",
+  },
 ];
